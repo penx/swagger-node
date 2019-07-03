@@ -9,14 +9,18 @@
   "main": "app.js",
   "dependencies": {
     "hapi": "^16.1.1",
-    "swagger-hapi": "^0.7.0"
+    "swagger-hapi": "^0.7.0",
+    "snyk": "^1.189.0"
   },
-  "devDependencies":  {
+  "devDependencies": {
     "should": "^11.2.1",
     "supertest": "^3.0.0"
   },
   "scripts": {
     "start": "node app.js",
-    "test": "swagger project test"
-  }
+    "test": "swagger project test",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
